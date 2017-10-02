@@ -5,19 +5,18 @@ layout: default
 <h1>Data test</h1>
 
 <div class="card-columns">
-{% for item in site.data.data | where:"country","china"%}
-  {% if item.country == 'China' %}
+{% assign countryItems = site.data.data | where:"country","United States" %}
+{% for item in countryItems %}
 <div class="card">
   <img class="card-img-top" src="http://www.shoesornoshoes.com/pics/ethno/pic/{{ item.number }}.jpg" class="img-fluid">
   <div class="card-body">
-    <h4 class="card-title">{{ item.country }}</h4>
-    <p class="card-text">{{ item.type }}<br />{{ item.style }}</p>
+    <h4 class="card-title">{{ item.number }} {{ item.country }}</h4>
+    <p class="card-text"><small>{{ item.type }}<br />{{ item.style }}</small></p>
   </div>
   <div class="card-footer">
-    <small class="text-muted">{{ item.period }} {{ item.century }} century</small>
+    <small class="text-muted">{{ item.period }} {{ item.century }} century {{ page.path }}</small>
   </div>
 </div>
-  {% endif %}
 {% endfor %}
   
 </div>
