@@ -1,0 +1,3 @@
+#SITE SETTINGS
+baseurl: /sons
+exclude: ['README.md']

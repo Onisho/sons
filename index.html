@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<h1>Data test</h1>
+
+<div class="card-columns">
+{% for item in site.data.data | where:"country","china"%}
+  {% if item.country == 'China' %}
+<div class="card">
+  <img class="card-img-top" src="http://www.shoesornoshoes.com/pics/ethno/pic/{{ item.number }}.jpg" class="img-fluid">
+  <div class="card-body">
+    <h4 class="card-title">{{ item.country }}</h4>
+    <p class="card-text">{{ item.type }}<br />{{ item.style }}</p>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted">{{ item.period }} {{ item.century }} century</small>
+  </div>
+</div>
+  {% endif %}
+{% endfor %}
+  
+</div>
