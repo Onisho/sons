@@ -1,3 +1,7 @@
 #SITE SETTINGS
 baseurl: /sons
 exclude: ['README.md']
+
+collections:
+  ethno:
+    output: true
