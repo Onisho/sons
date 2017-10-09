@@ -4,8 +4,10 @@ layout: default
 
 <h1>images from folder test</h1>
 
+<div class="bricklayer">
 {% for image in site.static_files %}
   {% if image.path contains 'assets/images' %}
-    <img src="{{site.baseurl}}{{ image.path }}" />
+    <div><img src="{{site.baseurl}}{{ image.path }}" class="img-fluid" /></div>
   {% endif %}
 {% endfor %}
+</div>
