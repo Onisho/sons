@@ -7,7 +7,19 @@ layout: default
 <div class="bricklayer">
 {% for image in site.static_files %}
   {% if image.path contains 'assets/images' %}
-    <div><img src="{{site.baseurl}}{{ image.path }}" class="img-fluid" /></div>
+  <div><a class="chocolat-image" href="{{site.baseurl}}{{ image.path }}" title="caption image 1"><img src="{{site.baseurl}}{{ image.path }}" class="img-fluid" /></a></div>
   {% endif %}
 {% endfor %}
+</div>
+
+<div class="test" data-chocolat-title="set title">
+    <a class="chocolat-image" href="http://127.0.0.1:4000/sons/assets/images/1.jpg" title="caption image 1">
+        <img width="100" src="http://127.0.0.1:4000/sons/assets/images/1.jpg" />
+    </a>
+    <a class="chocolat-image" href="http://127.0.0.1:4000/sons/assets/images/2.jpg" title="caption image 2">
+        <img width="100" src="http://127.0.0.1:4000/sons/assets/images/2.jpg" />
+    </a>
+    <a class="chocolat-image" href="http://127.0.0.1:4000/sons/assets/images/3.jpg" title="caption image 3">
+        <img width="100" src="http://127.0.0.1:4000/sons/assets/images/3.jpg"/>
+    </a>
 </div>
