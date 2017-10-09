@@ -5,3 +5,4 @@ exclude: ['README.md']
 collections:
   ethno:
     output: true
+    

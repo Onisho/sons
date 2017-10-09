@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<h1>images from folder test</h1>
+
+{% for image in site.static_files %}
+  {% if image.path contains 'assets/images' %}
+    <img src="{{site.baseurl}}{{ image.path }}" />
+  {% endif %}
+{% endfor %}
