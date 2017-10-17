@@ -1,8 +1,8 @@
 #SITE SETTINGS
 baseurl: /sons
 exclude: ['README.md']
+permalinks: pretty
 
 collections:
   ethno:
     output: true
-    
