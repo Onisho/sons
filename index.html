@@ -6,16 +6,16 @@ layout: default
 
 
 <div class="card-columns">
-{% assign countryItems = site.data.data | where:"country","United States" %}
+{% assign countryItems = site.data.data | where: "country", "China" %}
 {% for item in countryItems %}
 <div class="card">
   <img class="card-img-top" src="http://www.shoesornoshoes.com/pics/ethno/pic/{{ item.number }}.jpg" class="img-fluid">
   <div class="card-body">
-    <h4 class="card-title">{{ item.number }} {{ item.country }}</h4>
+    <h5 class="card-title">{{ item.number }} {{ item.country }}</h5>
     <p class="card-text"><small>{{ item.type }}<br />{{ item.style }}</small></p>
   </div>
   <div class="card-footer">
-    <small class="text-muted">{{ item.period }} {{ item.century }} century {{ page.path }}</small>
+    <small class="text-muted">{{ item.period }} {{ item.century }} century</small>
   </div>
 </div>
 {% endfor %}
